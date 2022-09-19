@@ -1,0 +1,174 @@
+.App {
+	margin: 3rem auto;
+	max-width: max-content;
+	font-family: sans-serif;
+}
+
+h3 {
+	color: #fff;
+	text-align: center;
+	margin-top: 5rem;
+}
+
+button {
+	cursor: pointer;
+}
+
+.input-main {
+	display: flex;
+	margin-bottom: 1.3rem;
+}
+
+.header {
+	background-color: blue;
+	width: 40rem;
+	height: 12rem;
+	border-radius: 0.7rem;
+	padding: 1.5rem;
+}
+
+.button {
+	display: flex;
+	justify-content: end;
+}
+
+label {
+	width: 2rem;
+	font-weight: 600;
+	font-size: 1rem;
+	font-family: sans-serif;
+	color: #fff;
+	margin-top: 0.5rem;
+}
+
+.name,
+.amount,
+.date {
+	flex: 1;
+	margin-left: 7rem;
+	height: 1.5rem;
+	border-radius: 0.7rem;
+	padding: 0.2rem 0.5rem;
+	outline: none;
+}
+
+.btn {
+	background-color: #fff;
+	margin: 0 0.4rem;
+	width: 4.5rem;
+	height: 1.5rem;
+	border-radius: 0.6rem;
+	outline: none;
+	border: 1px solid gray;
+}
+
+.date-header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 1rem;
+}
+
+.content {
+	width: 40rem;
+	padding: 1.5rem;
+	background-color: #333;
+	margin-top: 2rem;
+	border-radius: 0.7rem;
+	min-height: 30rem;
+}
+
+p {
+	color: #fff;
+}
+
+select {
+	width: 8rem;
+	height: 2.5rem;
+	border-radius: 0.5rem;
+	padding-left: 2.5rem;
+	outline: none;
+}
+
+.sub-content {
+	background-color: rgb(93, 175, 207);
+	height: 11rem;
+	border-radius: 0.7rem;
+	display: flex;
+}
+
+.chart {
+	background-color: rgb(65, 141, 192);
+	width: 1rem;
+	height: 8rem;
+	margin: 0.4rem 1.2rem 0 1.2rem;
+	border: 1px solid #333;
+	border-radius: 0.7rem;
+	position: relative;
+}
+
+.chart p {
+	margin-top: 8.6rem;
+	position: absolute;
+	right: -0.6rem;
+	color: #333;
+}
+
+.item {
+	height: 5rem;
+	background-color: gray;
+	margin-top: 2rem;
+	border-radius: 0.7rem;
+	display: flex;
+	padding: 0.6rem;
+	color: #fff;
+}
+
+.item__date {
+	background-color: rgb(24, 24, 24);
+	width: 5rem;
+	border-radius: 0.5rem;
+	text-align: center;
+	padding: 0.5rem;
+}
+
+.item__date div {
+	padding: 0.1rem;
+}
+
+.item__name {
+	flex: 1;
+	font-size: 1.8rem;
+	margin: 1.3rem 0 1.3rem 1rem;
+	font-family: sans-serif;
+}
+
+.item__dola {
+	text-align: center;
+	background-color: blueviolet;
+	width: 3rem;
+	height: 1.3rem;
+	border-radius: 0.5rem;
+	border: 1px solid #fff;
+	padding: 0 0.5rem;
+	margin: 1.7rem 0;
+}
+
+.toggle {
+	background-color: rgb(129, 129, 238);
+	height: 5rem;
+	width: 43rem;
+	text-align: center;
+	border-radius: 0.8rem;
+}
+
+.btn-toggle {
+	padding: 0.6rem 3rem;
+	border-radius: 0.7rem;
+	background-color: blueviolet;
+	margin: 1.3rem 0;
+	border: 1px solid blueviolet;
+}
+
+.btn-toggle:hover {
+	background-color: rgb(133, 77, 185);
+}
