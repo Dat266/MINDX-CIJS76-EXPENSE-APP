@@ -6,6 +6,7 @@ interface ContentProps {
 
 const Content = (props: ContentProps) => {
 	const { item } = props;
+
 	const month: string = moment(item.date).format("MMMM");
 	const day: string = moment(item.date).format("DD");
 	const year: string = moment(item.date).format("YYYY");

@@ -4,7 +4,6 @@ interface Input {
 	children: string;
 	placeholder: string;
 	value: any;
-
 	onChange: (a: string) => void;
 }
 

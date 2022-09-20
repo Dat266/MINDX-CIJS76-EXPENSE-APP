@@ -106,6 +106,14 @@ select {
 	position: relative;
 }
 
+.chart-sub {
+	position: absolute;
+	background-color: rgb(86, 228, 81);
+	border-radius: 0.7rem;
+	width: 0.778rem;
+	bottom: 0;
+}
+
 .chart p {
 	margin-top: 8.6rem;
 	position: absolute;

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Chart from "./components/Chart";
 import Date from "./components/Date/inex";
@@ -18,27 +18,25 @@ function App() {
 		amount: "",
 		date: "",
 	};
-
+	const [year, setYear] = useState<string>("2022");
 	const [show, setShow] = useState<boolean>(false);
 
 	const [user, setUser] = useState<User>(inital);
+	const initalData: any = JSON.parse(localStorage.Lists) || [];
+	const [lists, setLists] = useState<any>(initalData);
 
-	const [lists, setLists] = useState<any>(() => {
-		const arr: any = JSON.parse(localStorage.Lists) || [];
-		return arr;
-	});
-
+	console.log(lists);
 	const name: any = document.querySelector(".name");
 
 	const handleAdd = (e: any) => {
-		e.preventDefault();
-
 		setLists((prev: []) => {
 			const newList = [...prev, user];
 			localStorage.setItem("Lists", JSON.stringify(newList));
 			return newList;
 		});
+
 		setUser(inital);
+
 		name.focus();
 	};
 
@@ -47,7 +45,7 @@ function App() {
 	};
 
 	const handleName = (e: any) => {
-		setUser({ name: e });
+		setUser({ ...user, name: e });
 	};
 
 	const handleAmount = (e: any) => {
@@ -56,6 +54,14 @@ function App() {
 
 	const handleDate = (e: any) => {
 		setUser({ ...user, date: e });
+	};
+
+	useEffect(() => {
+		setLists(initalData.filter((item: any) => item.date.includes(year)));
+	}, [year]);
+
+	const handleChange = (e: any): void => {
+		setYear(e.target.value);
 	};
 
 	return (
@@ -74,8 +80,8 @@ function App() {
 			)}
 
 			<div className="content">
-				<Date />
-				<Chart />
+				<Date lists={lists} handleChange={handleChange} currYear={year} />
+				<Chart lists={lists} />
 				<Lists lists={lists} />
 			</div>
 		</div>

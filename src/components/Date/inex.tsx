@@ -1,8 +1,20 @@
-const Date = () => {
-	const dataYear = ["2022", "2021", "2020"];
-	const data = dataYear.map((item: string, index: number) => {
+import { useState } from "react";
+
+interface Date {
+	lists: any;
+	handleChange: any;
+	currYear: string;
+}
+
+const Date = (props: Date) => {
+	const { lists, handleChange, currYear } = props;
+
+	const initalYear = ["2022", "2021", "2020"];
+	const [years, setYears] = useState<any>(initalYear);
+
+	const data = years.map((item: string, index: number) => {
 		return (
-			<option key={index} id={item}>
+			<option key={index} value={item}>
 				{item}
 			</option>
 		);
@@ -11,7 +23,9 @@ const Date = () => {
 	return (
 		<div className="date-header">
 			<p>Filter by year</p>
-			<select>{data}</select>
+			<select value={currYear} onChange={handleChange}>
+				{data}
+			</select>
 		</div>
 	);
 };
